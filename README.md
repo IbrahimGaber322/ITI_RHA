@@ -5,3 +5,7 @@
 #Lab_2: [GO TO LAB 2](./lab2/lab_2.md)
 
 #Lab_3: [GO TO LAB 3](./lab3/lab_3.md)
+
+#Lab_4: [GO TO LAB 3](./lab3/lab_4.md)
+
+#Lab_5: [GO TO LAB 3](./lab3/lab_5.md)
