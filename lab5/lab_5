@@ -1,0 +1,7 @@
+1.Differences between compress and gzip:
+compress uses the Lempel-Ziv compression algorithm, while gzip uses the Deflate algorithm.
+gzip generally provides better compression ratios.
+
+12. Create a hard link of /etc/passwd in /boot. Could you? Why?
+
+You cannot create a hard link across different file systems. If /boot is on a different file system, you cannot create a hard link to a file in /etc.
