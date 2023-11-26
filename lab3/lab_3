@@ -1,0 +1,47 @@
+2. Open mycv file using vi command then: Without using arrows state how to:
+a. Move the cursor down one line at a time:
+
+Press j
+b. Move the cursor up one line at a time:
+
+Press k
+c. Search for the word "age":
+
+Press /age and then press Enter
+d. Step to line 5:
+
+Press 5G
+e. Delete the line you are on and line 5:
+
+Type dd to delete the current line.
+Press 5dd to delete the 5th line.
+f. Step to the end of the line and change to writing mode in one step:
+
+Press A
+
+6. What are the commands that list the value of a specific variable?
+
+echo $VARIABLE_NAME
+
+
+8. State the initialization files of: sh, ksh, bash
+
+For sh: /etc/profile, ~/.profile
+For ksh: /etc/profile, ~/.profile, /etc/ksh.kshrc, ~/.kshrc
+For bash: /etc/profile, ~/.bash_profile, ~/.bashrc
+
+10.Execute the following command :
+echo \ then press enter
+What is the purpose of \ ?
+
+Notice the prompt ”>” what is that? and how can you change it from “>” to “:”.
+
+
+When you execute the command echo \, you're essentially using the backslash \ as an escape character. In this context, the backslash is escaping the newline character that follows it, preventing the shell from treating it as the end of the command.
+
+The > prompt you're seeing indicates that the shell expects more input to complete the command. It's an indication that the command you entered is not yet complete, and the shell is prompting you to continue entering input.
+
+To change the > prompt to :, you need to complete the command. In this case, you can either provide additional text to the echo command or simply press Enter to finish the command. After pressing Enter, the shell should execute the command, and you'll see the familiar prompt.
+
+
+.

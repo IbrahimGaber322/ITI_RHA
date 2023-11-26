@@ -1,0 +1,115 @@
+Made with by 1
+1. Create a user account with the following attribute
+ username: islam
+ Fullname/comment: Islam Askar
+ Password: islam
+---> sudo useradd -c"Islam Askar" islam
+--- sudo passwd islam 
+--- new password: islam
+2. Create a user account with the following attribute
+ Username: baduser
+ Full name/comment: Bad User
+ Password: baduser
+---> sudo useradd -c"Bad User" baduser
+--- sudo passwd baduser
+--- new password: baduser
+3. Create a supplementary (Secondary) group called pgroup with group ID of 30000
+---> sudo groupadd --gid 30000 pgroup
+4. Create a supplementary group called badgroup
+---> sudo groupadd badgroup
+5. Add islam user to the pgroup group as a supplementary group
+---> sudo usermod -G pgroup islam
+6. Modify the password of islam's account to password
+---> sudo passwd islam
+---> new password: password
+7. Modify islam's account so the password expires after 30 days
+---> sudo chage -M 30
+8. Lock bad user account so he can't log in
+---> sudo passwd -l baduser
+9. Delete bad user account
+---> sudo userdel -r baduser
+10. Delete the supplementary group called badgroup.
+---> sudo groupdel badgroup
+13. Create a folder called myteam in your home directory and change its permissions to
+read only for the owner.
+---> mkdir ~/myteam
+--- chmod u=r myteam
+14. Log out and log in by another user
+---> su user2
+15. Try to access (by cd command) the folder (myteam)
+---> Can't access no permission
+16. Using the command Line
+ Change the permissions of oldpasswd file to give owner read and write
+permissions and for group write and execute and execute only for the others
+(using chmod in 2 different ways)
+---> chmod 724 oldpasswd
+---> chmod u=rw,g=wx,o=x oldpasswd
+ Change your default permissions to be as above.
+---> umask 013
+ What is the maximum permission a file can have, by default when it is just
+created? And what is that for directory.
+---> Maximum default permissions for a file: -rw-rw-rw- (666 in octal)
+---- Maximum default permissions for a directory: drwxrwxrwx (777 in octal)
+ Change your default permissions to be no permission to everyone then create a
+directory and a file to verify.
+---> umask 077
+---- touch testfile
+---- mkdir testdir
+---- ls -l testfile testdir
+
+17. What are the minimum permission needed for:
+ Copy a directory (permission for source directory and permissions for target
+parent directory)
+ Copy a file (permission for source file and and permission for target parent
+directory)
+ Delete a file
+ Change to a directory
+ List a directory content (ls command)
+ View a file content (more/cat command)
+ Modify a file content
+---->
+{
+Copy a Directory
+Permission for the source directory: Read (r) permission is required.
+Permission for the target parent directory: Write (w) permission is required.
+Copy a File
+Permission for the source file: Read (r) permission is required.
+Permission for the target parent directory: Write (w) permission is required.
+Delete a File
+Permission for the file: Write (w) permission is required.
+Permission for the parent directory: Write (w) permission is required.
+Change to a Directory (cd)
+Permission for the directory: Execute (x) permission is required.
+List a Directory Content (ls command)
+Permission for the directory: Read (r) permission is required.
+View a File Content (more/cat command)
+Permission for the file: Read (r) permission is required.
+Modify a File Content
+Permission for the file: Write (w) permission is required.
+}
+18. Create a file with permission 444. Try to edit in it and to remove it? Note what
+happened.
+---> # Create a file with permission 444
+touch readonlyfile
+chmod 444 readonlyfile
+
+# Try to edit the file
+echo "This is a test" > readonlyfile
+# You should see a permission denied error
+
+# Try to remove the file
+rm readonlyfile
+# You should see a permission denied error
+
+19. What is the difference between the “x” permission for a file and for a
+directory?
+--->
+For a File:
+
+For a file, the "x" (execute) permission means the ability to execute the file as a program or script.
+If the "x" permission is set for a user on a file, it allows that user to run the file as a program.
+For a Directory:
+
+For a directory, the "x" (execute) permission has a different significance.
+If the "x" permission is set for a user on a directory, it allows that user to access (enter or traverse) the directory and access its contents.
+Without the "x" permission on a directory, even if a user has read ("r") permission on the directory, they won't be able to access or list its contents or navigate into it using commands like cd.

@@ -1,0 +1,46 @@
+1. Install CentOS /RHEL
+--> DONE
+2. What is the difference between cat and more command?
+--> In case of larger files, 'cat' command output will scroll off your screen while 'more' command displays --- output one screenful at a time.
+3. What is the difference between rm and rmdir using man?
+-->The rm command can be used to delete non-empty directories as well but rmdir command is used to delete --- only empty directories. 
+4. Create the following hierarchy under your home directory:
+dir1 docs
+--> cd igaber
+--- sudo mkdir dir1 docs
+dir11 dir12 
+--> sudo mkdir dir1/dir1{1,2} 
+file1 mycv
+--> sudo touch dir1/dir11/file1 docs/mycv
+a. Remove dir11 in one-step. What did you notice? And how did you overcome that?
+--> When I used rmdir he told me that the folder is not empty so I used rm -r instead.
+b. Then remove dir12 using rmdir –p command. State what happened to the
+hierarchy (Note: you are in your home directory).
+--> It deleted dir1
+c. The output of the command pwd was /home/user. Write the absolute
+and relative path for the file mycv.
+--> relative: docs/mycv
+--- absolute ~/docs/mycv
+5. Copy the /etc/passwd file to your home directory making its name is mypasswd.
+--> cp /etc/passwd mypasswd
+6. Rename this new file to be oldpasswd.
+--> mv mypasswd oldpasswd
+7. You are in /usr/bin, list four ways to go to your home directory
+--> 1:cd ~
+--- 2:cd ../home/igaber
+--- 3:cd /home/igaber
+--- 4:cd $HOME
+8. List Linux commands in /usr/bin that start with letter w
+---> ls /bin/w*
+9. Display the first 4 lines of /etc/passwd
+---> head -4 etc/passwd
+10.Display the last 7 lines of /etc/passwd
+---> tail -7 etc/passwd
+11.Display the man pages of passwd the command and the file sequentially in one command.
+---> man passwd file
+12.Display the man page of the passwd file.
+---> man -s 5 passwd
+13.Display a list of all the commands that contain the keyword passwd in their man page.
+---> man -k passwd
+LAB1
+
