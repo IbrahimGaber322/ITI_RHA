@@ -1,4 +1,4 @@
-# ITI_Linux
+# ITI_RHA
 
 - Lab 1: [GO TO LAB 1](./lab1/lab_1.md)
 - Lab 2: [GO TO LAB 2](./lab2/lab_2.md)
